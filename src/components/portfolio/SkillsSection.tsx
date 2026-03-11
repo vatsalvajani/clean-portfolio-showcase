@@ -18,7 +18,7 @@ import {
 
 const techIcons = [
   { icon: SiHtml5, color: "#E34F26", label: "HTML5" },
-  { icon: SiCss3, color: "#1572B6", label: "CSS3" },
+  { icon: SiCss, color: "#1572B6", label: "CSS3" },
   { icon: SiJavascript, color: "#F7DF1E", label: "JavaScript" },
   { icon: SiReact, color: "#61DAFB", label: "React" },
   { icon: SiVuedotjs, color: "#4FC08D", label: "Vue.js" },
