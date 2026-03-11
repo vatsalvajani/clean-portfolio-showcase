@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Moon, Sun, Linkedin, Github } from "lucide-react";
+import { Moon, Sun, Linkedin, Github, Menu, X } from "lucide-react";
 
 const navLinks = [
   { label: "About me", href: "#home" },
