@@ -18,7 +18,7 @@ const Header = () => {
   }, [dark]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary dark:bg-card dark:border-b dark:border-border">
       <div className="container flex items-center justify-between h-14">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 text-primary-foreground font-heading font-bold text-lg">
