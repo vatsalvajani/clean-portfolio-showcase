@@ -43,6 +43,41 @@
 
     font-family: 'DM Sans', sans-serif;
   }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 240 5% 80%;
+
+    --card: 240 10% 14%;
+    --card-foreground: 240 5% 80%;
+
+    --popover: 240 10% 14%;
+    --popover-foreground: 240 5% 80%;
+
+    --primary: 253 85% 63%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 10% 18%;
+    --secondary-foreground: 240 5% 80%;
+
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 55%;
+
+    --accent: 253 40% 20%;
+    --accent-foreground: 253 85% 75%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 10% 20%;
+    --ring: 253 85% 63%;
+
+    --heading: 253 85% 75%;
+    --body: 240 5% 75%;
+    --body-light: 240 5% 55%;
+    --section-alt: 240 10% 12%;
+  }
 }
 
 @layer base {
