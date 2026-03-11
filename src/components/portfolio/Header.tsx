@@ -12,6 +12,7 @@ const navLinks = [
 
 const Header = () => {
   const [dark, setDark] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
@@ -45,7 +46,7 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Right side: socials + theme toggle */}
+        {/* Right side: socials + theme toggle + mobile menu button */}
         <div className="flex items-center gap-4">
           <a
             href="https://linkedin.com"
@@ -73,8 +74,35 @@ const Header = () => {
           >
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
+
+          {/* Mobile menu toggle */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile nav dropdown */}
+      {mobileOpen && (
+        <nav className="md:hidden bg-primary dark:bg-card border-t border-primary-foreground/10 dark:border-border">
+          <div className="container flex flex-col py-4 gap-3">
+            {navLinks.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                onClick={() => setMobileOpen(false)}
+                className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors py-1"
+              >
+                {l.label}
+              </a>
+            ))}
+          </div>
+        </nav>
+      )}
     </header>
   );
 };
