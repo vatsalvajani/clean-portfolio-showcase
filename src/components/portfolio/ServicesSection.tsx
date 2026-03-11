@@ -1,4 +1,4 @@
-import { Monitor, Paintbrush, Code, Smartphone } from "lucide-react";
+import { Monitor, Paintbrush, Code, Smartphone, Gauge, Globe } from "lucide-react";
 
 const services = [
   {
@@ -21,6 +21,16 @@ const services = [
     title: "Responsive Design",
     desc: "Ensuring pixel-perfect, responsive layouts that look great across all devices and screen sizes.",
   },
+  {
+    icon: Globe,
+    title: "WordPress Development",
+    desc: "Building custom WordPress themes with Elementor, WPBakery, and full custom code integration.",
+  },
+  {
+    icon: Gauge,
+    title: "Performance Optimization",
+    desc: "Improving speed and performance of web applications with optimized code, caching, and best practices.",
+  },
 ];
 
 const ServicesSection = () => (
@@ -31,7 +41,7 @@ const ServicesSection = () => (
         <h2 className="heading-md">What Do I Offer</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
           <div key={s.title} className="bg-background rounded-xl p-6 border border-border hover:shadow-lg hover:border-primary/30 transition-all duration-300 group">
             <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
