@@ -5,7 +5,7 @@ const HeroSection = () => (
   <section id="home" className="section-padding pt-28 md:pt-32 lg:pt-40 min-h-[90vh] flex items-center overflow-hidden">
     <div className="container">
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
-        <div className="flex-1 text-center md:text-left space-y-6 animate-fade-in-up">
+        <div className="flex-1 text-center md:text-left space-y-6">
           <p className="text-base text-body-light">👋 Hi there, I'm Vatsal</p>
           <h1 className="heading-lg !leading-tight !text-4xl md:!text-5xl lg:!text-6xl">
             <span className="text-foreground" style={{ color: 'hsl(var(--foreground))' }}>Crafting Intuitive</span>
@@ -42,7 +42,7 @@ const HeroSection = () => (
           </div>
         </div>
 
-        <div className="flex-shrink-0 animate-fade-in-up relative" style={{ animationDelay: "0.2s" }}>
+        <div className="flex-shrink-0 relative">
           <svg
             width="420"
             height="420"
