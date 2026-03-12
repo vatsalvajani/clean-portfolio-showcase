@@ -67,9 +67,9 @@ const WorkSection = () => {
 
         <div className="max-w-5xl mx-auto">
           <div className="bg-background rounded-2xl overflow-hidden border border-border shadow-sm">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 transition-opacity duration-500 ease-in-out" key={current}>
               {/* Left: Image placeholder */}
-              <div className="aspect-square md:aspect-auto bg-muted flex items-center justify-center min-h-[300px] md:min-h-[450px] rounded-tl-2xl rounded-bl-none md:rounded-bl-2xl rounded-tr-2xl md:rounded-tr-none">
+              <div className="aspect-square md:aspect-auto bg-muted flex items-center justify-center min-h-[300px] md:min-h-[450px] rounded-tl-2xl rounded-bl-none md:rounded-bl-2xl rounded-tr-2xl md:rounded-tr-none animate-fade-in">
                 <span className="text-muted-foreground text-sm">Project Preview</span>
               </div>
 

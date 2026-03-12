@@ -42,7 +42,7 @@ const HeroSection = () => (
           </div>
         </div>
 
-        <div className="flex-shrink-0 animate-fade-in-up relative" style={{ animationDelay: "0.2s" }}>
+        <div className="flex-shrink-0 relative">
           <svg
             width="420"
             height="420"

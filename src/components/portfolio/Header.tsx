@@ -87,22 +87,24 @@ const Header = () => {
       </div>
 
       {/* Mobile nav dropdown */}
-      {mobileOpen && (
-        <nav className="md:hidden bg-primary dark:bg-card border-t border-primary-foreground/10 dark:border-border">
-          <div className="container flex flex-col py-4 gap-3">
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors py-1"
-              >
-                {l.label}
-              </a>
-            ))}
-          </div>
-        </nav>
-      )}
+      <nav
+        className={`md:hidden bg-primary dark:bg-card border-t border-primary-foreground/10 dark:border-border overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="container flex flex-col py-4 gap-3">
+          {navLinks.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setMobileOpen(false)}
+              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors py-1"
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
+      </nav>
     </header>
   );
 };
