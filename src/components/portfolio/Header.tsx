@@ -88,17 +88,22 @@ const Header = () => {
 
       {/* Mobile nav dropdown */}
       <nav
-        className={`md:hidden bg-primary dark:bg-card border-t border-primary-foreground/10 dark:border-border overflow-hidden transition-all duration-300 ease-in-out ${
-          mobileOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`md:hidden bg-primary dark:bg-card border-t border-primary-foreground/10 dark:border-border overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
+          mobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="container flex flex-col py-4 gap-3">
-          {navLinks.map((l) => (
+        <div className="container flex flex-col py-4 gap-1">
+          {navLinks.map((l, i) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setMobileOpen(false)}
-              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors py-1"
+              className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground hover:translate-x-2 transition-all duration-300 py-2 px-2 rounded-md hover:bg-primary-foreground/10"
+              style={{
+                transitionDelay: mobileOpen ? `${i * 60}ms` : '0ms',
+                opacity: mobileOpen ? 1 : 0,
+                transform: mobileOpen ? 'translateY(0)' : 'translateY(-8px)',
+              }}
             >
               {l.label}
             </a>
