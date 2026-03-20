@@ -1,0 +1,76 @@
+.contact-container {
+  @apply container max-w-6xl;
+}
+
+.contact-title {
+  @apply text-3xl md:text-4xl font-bold text-primary mb-4;
+}
+
+.contact-subtitle {
+  @apply text-body-light max-w-2xl text-sm leading-relaxed;
+}
+
+.contact-layout {
+  @apply flex items-start gap-12 mt-10;
+}
+
+.contact-details {
+  @apply flex items-start flex-col gap-6 max-w-96 w-full;
+}
+
+.contact-link {
+  @apply inline-flex items-center gap-4;
+}
+
+.contact-icon-wrapper {
+  @apply w-16 h-16 rounded-xl flex items-center justify-center shrink-0 bg-primary-gradient p-0.5;
+}
+
+.contact-icon-span{
+  @apply flex items-center justify-center h-full w-full rounded-[10px] bg-background
+}
+
+.contact-info{
+  @apply flex flex-col gap-y-0.5
+}
+
+.contact-label {
+  @apply text-base text-body-light;
+}
+
+.contact-value-link {
+  @apply text-lg font-semibold text-foreground group-hover:text-primary transition-colors;
+}
+
+.contact-value {
+  @apply text-sm font-semibold text-foreground;
+}
+
+.contact-form-wrapper {
+  @apply max-w-3xl w-full;
+}
+
+.contact-form-title {
+  @apply text-xl font-semibold text-foreground mb-6;
+}
+
+.contact-form {
+  @apply space-y-4;
+}
+
+.contact-form-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+}
+
+.contact-form-label {
+  @apply text-xs font-medium text-foreground mb-1 block;
+}
+
+.contact-form-input {
+  @apply w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring min-h-14;
+}
+
+.contact-form-textarea {
+  @apply w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring resize-none;
+}
+

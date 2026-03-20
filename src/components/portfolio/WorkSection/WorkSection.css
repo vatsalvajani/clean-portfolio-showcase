@@ -1,0 +1,103 @@
+.work-container {
+  @apply container;
+}
+
+.work-inner {
+  @apply flex flex-col 2xl:max-w-7xl mx-auto;
+}
+
+.work-card {
+  @apply bg-background overflow-hidden rounded-lg p-6 md:p-8;
+}
+
+.work-grid {
+  @apply flex items-stretch transition-opacity gap-x-10 duration-500 ease-in-out;
+}
+
+.work-preview {
+  @apply border border-border/50 max-w-lg w-full flex items-center justify-center rounded-md;
+}
+
+.work-preview img{
+  @apply min-h-[350px] rounded-md
+}
+
+.work-preview-label {
+  @apply text-muted-foreground text-sm;
+}
+
+.work-details {
+  @apply flex flex-col justify-between max-w-[calc(100%-512px)] w-full;
+}
+
+.work-details-wrapper{
+  @apply w-full
+}
+
+.work-meta-header {
+  @apply flex items-center justify-between mb-4;
+}
+
+.work-category {
+  @apply text-xs uppercase tracking-widest text-primary font-medium;
+}
+
+.work-link-button {
+  @apply w-10 h-10 rounded-full border border-border flex items-center justify-center text-foreground bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors shrink-0;
+}
+
+.work-project-title {
+  @apply text-xl md:text-2xl font-semibold font-heading text-primary;
+}
+
+.work-description {
+  @apply text-muted-foreground text-lg leading-relaxed;
+}
+
+.work-info-title{
+  @apply font-bold mb-3 text-lg
+}
+
+.work-meta {
+  @apply mt-8;
+}
+
+.work-meta-row {
+  @apply flex items-center justify-between py-3 border-t border-b border-border;
+}
+
+.work-meta-row + .work-meta-row{
+  @apply -mt-px
+}
+
+.work-meta-row-last {
+  @apply flex justify-between py-3;
+}
+
+.work-meta-label {
+  @apply min-w-40 text-xs uppercase tracking-wider text-muted-foreground font-medium;
+}
+
+.work-meta-value {
+  @apply text-sm text-foreground text-right;
+}
+
+.work-controls {
+  @apply flex items-center justify-center gap-6 mt-8;
+}
+
+.work-arrow-button {
+  @apply w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors;
+}
+
+.work-dots {
+  @apply flex gap-2;
+}
+
+.work-dot {
+  @apply w-2.5 h-2.5 rounded-full transition-colors bg-border;
+}
+
+.work-dot-active {
+  @apply bg-primary;
+}

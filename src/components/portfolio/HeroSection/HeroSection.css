@@ -1,0 +1,88 @@
+.hero-section {
+  @apply py-16 lg:py-24 pt-28 md:pt-32 lg:pt-40 min-h-[90vh] flex items-center overflow-hidden bg-hero-pattern bg-no-repeat bg-center bg-cover;
+}
+
+.hero-container {
+  @apply container;
+}
+
+.hero-layout {
+  @apply flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16;
+}
+
+.hero-content {
+  @apply max-w-[720px] text-center md:text-left space-y-6;
+}
+
+.hero-greeting {
+  @apply text-base text-body-light;
+}
+
+.hero-heading {
+  @apply font-bold text-4xl md:text-5xl lg:text-6xl lg:leading-tight;
+}
+
+.hero-heading-line {
+  @apply inline-flex w-full;
+}
+
+.hero-heading-line-main {
+  @apply text-foreground;
+}
+
+.hero-heading-line-gradient {
+  @apply bg-primary-gradient bg-clip-text text-transparent;
+}
+
+.hero-description {
+  @apply text-body-light max-w-lg mx-auto md:mx-0 leading-relaxed text-base;
+}
+
+.hero-actions {
+  @apply flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2;
+}
+
+.hero-primary-button {
+  @apply rounded-2xl gap-2 xl:px-7;
+}
+
+.hero-secondary-button {
+  @apply bg-primary-gradient hover:bg-primary-gradient-reverse transition !p-px;
+}
+
+.hero-secondary-btn-span{
+  @apply px-4 py-2 gap-x-2 flex h-full items-center rounded-[10px] bg-background
+}
+
+.hero-experience {
+  @apply pt-4 space-y-3;
+}
+
+.hero-experience-text {
+  @apply text-sm text-body-light;
+}
+
+.hero-tools {
+  @apply flex gap-3 justify-center md:justify-start;
+}
+
+.hero-tool-card {
+  @apply w-14 h-14 rounded-lg bg-section-alt border border-border flex items-center justify-center;
+}
+
+.hero-tool-icon {
+  @apply w-7 h-7 object-contain;
+}
+
+.hero-image-wrapper {
+  @apply flex justify-center items-end max-w-md min-h-[448px] w-full relative bg-section-alt rounded-lg p-5 pb-0 overflow-hidden;
+}
+
+/* .hero-image-wrapper {
+  @apply flex max-w-lg w-full relative bg-section-alt before:content-[''] before:absolute before:-bottom-12 before:-left-20 before:max-w-96 before:max-h-96 before:w-full before:h-full before:bg-[url(src/assets/bg-profile-pattern.svg)] before:bg-no-repeat before:bg-contain before:bg-center before:-z-10;
+} */
+
+.hero-image {
+  @apply w-full relative z-20;
+}
+

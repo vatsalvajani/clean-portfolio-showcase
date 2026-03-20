@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,41 +7,43 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 3% 38%;
+    --foreground: 240 7% 13%;
+
+    --profile-bg: 270 10% 39%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 3% 38%;
+    --card-foreground: 240 7% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 3% 38%;
+    --popover-foreground: 240 7% 13%;
 
-    --primary: 253 85% 63%;
+    --primary: 252 86% 62%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 6% 95%;
-    --secondary-foreground: 240 3% 38%;
+    --secondary-foreground: 240 7% 13%;
 
     --muted: 240 6% 95%;
-    --muted-foreground: 240 3% 55%;
+    --muted-foreground: 240 7% 13%;
 
-    --accent: 253 85% 96%;
-    --accent-foreground: 253 85% 63%;
+    --accent: 252.86 50% 94.51%;
+    --accent-foreground: 252 86% 62%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 253 85% 63%;
+    --border: 240 4.5% 78.24%;
+    --input: 240 5% 78%;
+    --ring: 252 86% 62%;
 
     --radius: 0.75rem;
 
-    --heading: 253 85% 63%;
-    --body: 240 3% 38%;
-    --body-light: 240 3% 55%;
-    --section-alt: 253 85% 98%;
+    --heading: 252 86% 62%;
+    --body: 240 7% 13%;
+    --body-light: 240 7% 13%;
+    --section-alt: 253 100% 97%;
 
-    font-family: 'DM Sans', sans-serif;
+    font-family: "Urbanist", sans-serif;
   }
 
   .dark {
@@ -54,7 +56,7 @@
     --popover: 240 10% 14%;
     --popover-foreground: 240 5% 80%;
 
-    --primary: 253 85% 63%;
+    --primary: 252 86% 62%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 10% 18%;
@@ -63,17 +65,17 @@
     --muted: 240 10% 18%;
     --muted-foreground: 240 5% 55%;
 
-    --accent: 253 40% 20%;
-    --accent-foreground: 253 85% 75%;
+    --accent: 252 40% 20%;
+    --accent-foreground: 252 85% 75%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 240 10% 20%;
     --input: 240 10% 20%;
-    --ring: 253 85% 63%;
+    --ring: 252 86% 62%;
 
-    --heading: 253 85% 75%;
+    --heading: 252 85% 75%;
     --body: 240 5% 75%;
     --body-light: 240 5% 55%;
     --section-alt: 240 10% 12%;
@@ -87,7 +89,7 @@
 
   * {
     @apply border-border;
-    transition: background-color 0.5s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   }
 
   body {
@@ -95,7 +97,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Urbanist", sans-serif;
     color: hsl(var(--heading));
   }
 }
@@ -115,14 +117,14 @@
   }
   .heading-lg {
     @apply text-3xl md:text-4xl lg:text-5xl font-bold;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Urbanist", sans-serif;
   }
   .heading-md {
     @apply text-2xl md:text-3xl font-bold;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Urbanist", sans-serif;
   }
   .heading-sm {
     @apply text-xl md:text-2xl font-semibold;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Urbanist", sans-serif;
   }
 }

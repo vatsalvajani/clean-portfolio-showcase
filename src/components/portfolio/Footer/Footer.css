@@ -1,0 +1,31 @@
+.footer {
+  @apply bg-[hsl(230,25%,12%)] py-10 relative before:content-[''] before:top-0 before:left-0 before:absolute before:w-full before:h-full before:bg-hero-pattern before:bg-no-repeat before:bg-center before:bg-cover;
+}
+
+.footer .container {
+  @apply flex flex-col items-center gap-6 relative;
+}
+
+.footer-logo {
+  @apply text-lg font-semibold text-white tracking-wide;
+}
+
+.footer-logo-mark {
+  @apply text-primary font-bold;
+}
+
+.footer-nav {
+  @apply flex flex-wrap items-center justify-center gap-6;
+}
+
+.footer-nav-link {
+  @apply text-sm text-gray-400 hover:text-primary transition-colors;
+}
+
+.footer-copy {
+  @apply text-xs text-gray-500;
+}
+
+.footer-copy-link {
+  @apply text-primary hover:underline;
+}

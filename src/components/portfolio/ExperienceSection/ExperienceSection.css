@@ -1,0 +1,56 @@
+.experience-container {
+  @apply container max-w-3xl;
+}
+
+.experience-timeline {
+  @apply relative max-w-2xl mx-auto;
+}
+
+.experience-timeline-line {
+  @apply absolute left-4 md:left-6 top-0 bottom-0 w-px bg-border;
+}
+
+.experience-list {
+  @apply space-y-10;
+}
+
+.experience-item {
+  @apply relative pl-12 md:pl-16;
+}
+
+.experience-badge {
+  @apply absolute left-0 md:left-1 top-1 w-10 h-10 rounded-full bg-primary-gradient p-0.5;
+}
+
+.experience-badge-wrap{
+  @apply flex items-center justify-center h-full w-full rounded-full bg-background
+}
+
+.experince-details-wrap{
+  @apply flex flex-col
+}
+
+.experience-period {
+  @apply text-xs text-primary font-medium uppercase tracking-wider mb-1;
+}
+
+.experience-company {
+  @apply text-lg font-semibold font-heading;
+}
+
+.experience-role {
+  @apply text-sm text-body-light mb-3;
+}
+
+.experience-points {
+  @apply space-y-1.5;
+}
+
+.experience-point {
+  @apply text-sm text-body-light leading-relaxed flex gap-2;
+}
+
+.experience-point-bullet {
+  @apply mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0;
+}
+

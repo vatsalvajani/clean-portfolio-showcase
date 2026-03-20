@@ -12,13 +12,14 @@ export default {
         sm: "640px",
         md: "768px",
         lg: "1024px",
-        xl: "1200px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
     },
     extend: {
       fontFamily: {
-        heading: ["Outfit", "sans-serif"],
-        body: ["DM Sans", "sans-serif"],
+        heading: ["Urbanist", "sans-serif"],
+        body: ["Urbanist", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -30,6 +31,7 @@ export default {
         body: "hsl(var(--body))",
         "body-light": "hsl(var(--body-light))",
         "section-alt": "hsl(var(--section-alt))",
+        "profile-img": "hsl(var(--profile-bg))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -69,10 +71,10 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+      backgroundImage: {
+        'primary-gradient': 'linear-gradient(to right, #6D4DF2, #8C71FF)',
+        'primary-gradient-reverse': 'linear-gradient(to right, #8C71FF, #6D4DF2)',
+        "hero-pattern": "url('/src/assets/bg-pattern.svg')",
       },
       keyframes: {
         "accordion-down": {
