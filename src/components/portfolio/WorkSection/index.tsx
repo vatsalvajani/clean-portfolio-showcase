@@ -99,7 +99,7 @@ const WorkSection = () => {
       <div className="container">
         <div className="common-section-header">
           <p className="section-sub-title">Portfolio</p>
-          <h2 className="section-title">My Work</h2>
+          <h2 className="section-title">My Latest Works</h2>
         </div>
 
         <div className="work-inner">

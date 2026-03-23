@@ -1,9 +1,9 @@
 .common-section-header{
-    @apply text-center mb-12;
+    @apply text-center xl:mb-12 sm:mb-8 mb-6;
 }
 
 .section-title {
-  @apply text-2xl md:text-3xl font-bold font-heading;
+  @apply md:text-3xl text-2xl font-bold font-heading;
 }
 
 .section-sub-title {
@@ -15,5 +15,5 @@
 }
 
 .common-section-spacing{
-  @apply 2xl:py-20 xl:py-16
+  @apply 2xl:py-20 xl:py-16 md:py-14 py-12 
 }

@@ -1,5 +1,5 @@
 .hero-section {
-  @apply py-16 lg:py-24 pt-28 md:pt-32 lg:pt-40 min-h-[90vh] flex items-center overflow-hidden bg-hero-pattern bg-no-repeat bg-center bg-cover;
+  @apply xl:pt-32 xl:pb-28 md:pt-28 lg:pb-24 pb-16 pt-24 flex items-center overflow-hidden bg-hero-pattern bg-no-repeat bg-center bg-cover;
 }
 
 .hero-container {
@@ -7,11 +7,11 @@
 }
 
 .hero-layout {
-  @apply flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16;
+  @apply flex flex-col-reverse md:flex-row items-center md:justify-between justify-center sm:gap-10 gap-8;
 }
 
 .hero-content {
-  @apply max-w-[720px] text-center md:text-left space-y-6;
+  @apply sm:max-w-[720px] sm:w-auto w-full text-center md:text-left lg:space-y-6;
 }
 
 .hero-greeting {
@@ -19,11 +19,11 @@
 }
 
 .hero-heading {
-  @apply font-bold text-4xl md:text-5xl lg:text-6xl lg:leading-tight;
+  @apply font-bold xl:text-6xl xl:leading-tight md:text-5xl md:leading-tight sm:text-4xl sm:leading-tight text-3xl leading-tight lg:mb-0 mb-4 md:text-left text-center;
 }
 
 .hero-heading-line {
-  @apply inline-flex w-full;
+  @apply inline-flex md:w-full;
 }
 
 .hero-heading-line-main {
@@ -31,19 +31,19 @@
 }
 
 .hero-heading-line-gradient {
-  @apply bg-primary-gradient bg-clip-text text-transparent;
+  @apply bg-primary-gradient bg-clip-text text-transparent md:ml-0 ml-2;
 }
 
 .hero-description {
-  @apply text-body-light max-w-lg mx-auto md:mx-0 leading-relaxed text-base;
+  @apply text-body-light max-w-lg mx-auto md:mx-0 leading-relaxed text-base lg:mb-0 mb-6;
 }
 
 .hero-actions {
-  @apply flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2;
+  @apply flex gap-4 justify-center md:justify-start lg:pt-2 mb-6;
 }
 
 .hero-primary-button {
-  @apply rounded-2xl gap-2 xl:px-7;
+  @apply rounded-2xl gap-2 xl:px-7 md:px-5;
 }
 
 .hero-secondary-button {
@@ -59,30 +59,30 @@
 }
 
 .hero-experience-text {
-  @apply text-sm text-body-light;
+  @apply text-sm text-subtext;
 }
 
 .hero-tools {
-  @apply flex gap-3 justify-center md:justify-start;
+  @apply flex sm:flex-nowrap flex-wrap gap-3 justify-center md:justify-start;
 }
 
 .hero-tool-card {
-  @apply w-14 h-14 rounded-lg bg-section-alt border border-border flex items-center justify-center;
+  @apply sm:w-14 sm:h-14 w-12 h-12 rounded-lg bg-section-alt border border-border flex items-center justify-center;
 }
 
 .hero-tool-icon {
   @apply w-7 h-7 object-contain;
 }
 
-.hero-image-wrapper {
-  @apply flex justify-center items-end max-w-md min-h-[448px] w-full relative bg-section-alt rounded-lg p-5 pb-0 overflow-hidden;
+.hero-image-wrapper{
+  @apply w-full xl:max-w-md lg:max-w-sm md:max-w-72 sm:max-w-80 max-w-72 flex items-center justify-center
 }
 
-/* .hero-image-wrapper {
-  @apply flex max-w-lg w-full relative bg-section-alt before:content-[''] before:absolute before:-bottom-12 before:-left-20 before:max-w-96 before:max-h-96 before:w-full before:h-full before:bg-[url(src/assets/bg-profile-pattern.svg)] before:bg-no-repeat before:bg-contain before:bg-center before:-z-10;
-} */
+.profile-img-wrap{
+  @apply rounded-full overflow-hidden border border-border bg-section-alt flex justify-center items-end max-w-full w-full xl:min-h-[448px] lg:min-h-96 md:min-h-72 sm:min-h-80 sm:w-full sm:h-full min-h-72
+}
 
 .hero-image {
-  @apply w-full relative z-20;
+  @apply lg:w-5/6 md:w-11/12 relative z-20 drop-shadow-custom object-contain;
 }
 

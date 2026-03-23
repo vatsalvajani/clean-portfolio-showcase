@@ -67,7 +67,9 @@ const HeroSection = () => (
         </div>
 
         <div className="hero-image-wrapper">
-          <img src={profileImage} className="hero-image" />
+          <span className="profile-img-wrap">
+            <img src={profileImage} className="hero-image" />
+          </span>
         </div>
       </div>
     </div>

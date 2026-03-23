@@ -7,19 +7,19 @@
 }
 
 .work-card {
-  @apply bg-background overflow-hidden rounded-lg p-6 md:p-8;
+  @apply bg-background overflow-hidden rounded-lg lg:p-8 sm:p-6 p-4;
 }
 
 .work-grid {
-  @apply flex items-stretch transition-opacity gap-x-10 duration-500 ease-in-out;
+  @apply flex lg:items-stretch lg:flex-row flex-col transition-opacity lg:gap-x-10 lg:gap-y-0 sm:gap-y-6 gap-y-4 duration-500 ease-in-out;
 }
 
 .work-preview {
-  @apply border border-border/50 max-w-lg w-full flex items-center justify-center rounded-md;
+  @apply border border-border/50 lg:max-w-lg md:max-w-lg lg:mx-0 mx-auto w-full flex items-center justify-center rounded-md;
 }
 
 .work-preview img{
-  @apply min-h-[350px] rounded-md
+  @apply lg:min-h-[350px] lg:w-auto w-full rounded-md
 }
 
 .work-preview-label {
@@ -27,7 +27,7 @@
 }
 
 .work-details {
-  @apply flex flex-col justify-between max-w-[calc(100%-512px)] w-full;
+  @apply flex flex-col justify-between lg:max-w-[calc(100%-512px)] w-full;
 }
 
 .work-details-wrapper{
@@ -51,7 +51,7 @@
 }
 
 .work-description {
-  @apply text-muted-foreground text-lg leading-relaxed;
+  @apply text-body-light md:text-lg sm:text-base;
 }
 
 .work-info-title{
@@ -63,7 +63,7 @@
 }
 
 .work-meta-row {
-  @apply flex items-center justify-between py-3 border-t border-b border-border;
+  @apply flex sm:items-center items-start justify-between sm:flex-row flex-col py-3 border-t border-b border-border sm:gap-y-0 gap-y-2;
 }
 
 .work-meta-row + .work-meta-row{
@@ -71,7 +71,7 @@
 }
 
 .work-meta-row-last {
-  @apply flex justify-between py-3;
+  @apply flex sm:flex-row flex-col justify-between py-3 sm:gap-y-0 gap-y-2;
 }
 
 .work-meta-label {
@@ -79,11 +79,11 @@
 }
 
 .work-meta-value {
-  @apply text-sm text-foreground text-right;
+  @apply text-sm text-body-light sm:text-right text-left;
 }
 
 .work-controls {
-  @apply flex items-center justify-center gap-6 mt-8;
+  @apply flex items-center justify-center gap-6 sm:mt-8 mt-6;
 }
 
 .work-arrow-button {

@@ -11,19 +11,19 @@
 }
 
 .contact-layout {
-  @apply flex items-start gap-12 mt-10;
+  @apply flex lg:items-start lg:flex-row flex-col lg:gap-12 gap-8 lg:mt-10 sm:mt-8 mt-6;
 }
 
 .contact-details {
-  @apply flex items-start flex-col gap-6 max-w-96 w-full;
+  @apply flex items-start flex-col lg:gap-6 gap-4 max-w-96 w-full;
 }
 
 .contact-link {
-  @apply inline-flex items-center gap-4;
+  @apply inline-flex items-center sm:gap-4 gap-3;
 }
 
 .contact-icon-wrapper {
-  @apply w-16 h-16 rounded-xl flex items-center justify-center shrink-0 bg-primary-gradient p-0.5;
+  @apply lg:w-14 lg:h-14 sm:w-12 sm:h-12 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-primary-gradient p-0.5;
 }
 
 .contact-icon-span{
@@ -35,15 +35,15 @@
 }
 
 .contact-label {
-  @apply text-base text-body-light;
+  @apply sm:text-base text-sm text-body-light;
 }
 
 .contact-value-link {
-  @apply text-lg font-semibold text-foreground group-hover:text-primary transition-colors;
+  @apply sm:text-lg text-base font-semibold text-foreground group-hover:text-primary transition-colors;
 }
 
 .contact-value {
-  @apply text-sm font-semibold text-foreground;
+  @apply text-lg font-semibold text-foreground;
 }
 
 .contact-form-wrapper {
@@ -63,11 +63,11 @@
 }
 
 .contact-form-label {
-  @apply text-xs font-medium text-foreground mb-1 block;
+  @apply text-sm font-medium text-foreground mb-1 block;
 }
 
 .contact-form-input {
-  @apply w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring min-h-14;
+  @apply w-full sm:px-4 sm:py-3 px-3 py-2 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring sm:min-h-14 min-h-12;
 }
 
 .contact-form-textarea {

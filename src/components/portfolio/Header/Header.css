@@ -1,9 +1,9 @@
 .header {
-  @apply fixed top-0 left-0 right-0 z-50 bg-primary dark:bg-card dark:border-b dark:border-border py-3;
+  @apply fixed top-0 left-0 right-0 z-50 bg-primary dark:bg-card dark:border-b dark:border-border lg:py-3 md:py-1 py-2;
 }
 
 .header .container {
-  @apply flex items-center justify-between h-14;
+  @apply flex items-center justify-between md:h-14;
 }
 
 .header-logo {
@@ -11,27 +11,31 @@
 }
 
 .header-nav {
-  @apply hidden md:flex items-center gap-7;
+  @apply hidden md:flex items-center lg:gap-7 md:gap-4;
 }
 
 .header-nav-link {
-  @apply text-base font-medium text-primary-foreground/50 hover:text-primary-foreground active:text-primary-foreground transition-colors p-1;
+  @apply lg:text-base sm:text-sm font-medium text-primary-foreground/70 active:text-primary-foreground transition-colors p-1;
 }
 
 .header-right {
-  @apply flex items-center gap-4;
+  @apply flex items-center lg:gap-4 gap-3;
 }
 
 .header-social-link {
-  @apply text-primary-foreground hover:text-primary-foreground transition-colors;
+  @apply text-primary-foreground hover:text-primary-foreground transition-colors sm:w-5 sm:h-5 w-4 h-4;
+}
+
+.header-social-link svg{
+  @apply w-full
 }
 
 .header-theme-toggle {
-  @apply flex items-center justify-center bg-primary-foreground/10 text-primary-foreground hover:text-primary-foreground transition-colors w-10 h-10;
+  @apply flex items-center justify-center bg-primary-foreground/10 text-primary-foreground hover:text-primary-foreground transition-colors sm:w-10 sm:h-10 w-8 h-8;
 }
 
 .header-theme-icon {
-  @apply w-[18px] h-[18px] transition-all duration-300;
+  @apply sm:w-[18px] sm:h-[18px] w-4 h-4 transition-all duration-300;
 }
 
 .header-mobile-toggle {

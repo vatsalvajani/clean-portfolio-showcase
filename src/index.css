@@ -7,24 +7,24 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 240 7% 13%;
+    --foreground: 240 7.46% 13.14%;
 
     --profile-bg: 270 10% 39%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 7% 13%;
+    --card-foreground: 240 7.46% 13.14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 7% 13%;
+    --popover-foreground: 240 7.46% 13.14%;
 
     --primary: 252 86% 62%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 240 6% 95%;
-    --secondary-foreground: 240 7% 13%;
+    --secondary-foreground: 240 7.46% 13.14%;
 
     --muted: 240 6% 95%;
-    --muted-foreground: 240 7% 13%;
+    --muted-foreground: 240 7.46% 13.14%;
 
     --accent: 252.86 50% 94.51%;
     --accent-foreground: 252 86% 62%;
@@ -39,8 +39,9 @@
     --radius: 0.75rem;
 
     --heading: 252 86% 62%;
-    --body: 240 7% 13%;
-    --body-light: 240 7% 13%;
+    --body: 240 7.46% 13.14%;
+    --body-light: 240 3.8% 38.24%;
+    --sub-text: 240 2% 44%;
     --section-alt: 253 100% 97%;
 
     font-family: "Urbanist", sans-serif;

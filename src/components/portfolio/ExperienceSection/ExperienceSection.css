@@ -3,7 +3,7 @@
 }
 
 .experience-timeline {
-  @apply relative max-w-2xl mx-auto;
+  @apply relative lg:max-w-2xl max-w-full mx-auto;
 }
 
 .experience-timeline-line {
@@ -19,7 +19,7 @@
 }
 
 .experience-badge {
-  @apply absolute left-0 md:left-1 top-1 w-10 h-10 rounded-full bg-primary-gradient p-0.5;
+  @apply absolute left-0 md:left-1 top-1 sm:w-10 sm:h-10 w-8 h-8 rounded-full bg-primary-gradient p-0.5;
 }
 
 .experience-badge-wrap{
@@ -31,7 +31,7 @@
 }
 
 .experience-period {
-  @apply text-xs text-primary font-medium uppercase tracking-wider mb-1;
+  @apply text-xs text-foreground font-medium uppercase tracking-wider mb-1;
 }
 
 .experience-company {
@@ -47,10 +47,10 @@
 }
 
 .experience-point {
-  @apply text-sm text-body-light leading-relaxed flex gap-2;
+  @apply sm:text-base text-sm text-body-light leading-relaxed flex gap-2;
 }
 
 .experience-point-bullet {
-  @apply mt-1.5 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0;
+  @apply mt-2 w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0;
 }
 
