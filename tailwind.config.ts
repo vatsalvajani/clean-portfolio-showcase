@@ -28,6 +28,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         heading: "hsl(var(--heading))",
+        "dark-txt-hover": "hsl(var(--primary-hover))",
         body: "hsl(var(--body))",
         "body-light": "hsl(var(--body-light))",
         "section-alt": "hsl(var(--section-alt))",

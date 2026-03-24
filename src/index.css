@@ -48,10 +48,10 @@
   }
 
   .dark {
-    --background: 240 10% 10%;
-    --foreground: 240 5% 80%;
+    --background: 240 7.46% 13.14%;
+    --foreground: 0 0% 100%;
 
-    --card: 240 10% 14%;
+    --card: 240 10.34% 17.06%;
     --card-foreground: 240 5% 80%;
 
     --popover: 240 10% 14%;
@@ -78,8 +78,10 @@
 
     --heading: 252 85% 75%;
     --body: 240 5% 75%;
-    --body-light: 240 5% 55%;
-    --section-alt: 240 10% 12%;
+    --body-light: 240 1.36% 56.67%;
+    --section-alt: 240 10.34% 17.06%;
+
+    --sub-text: 240 1.22% 48.04%;
   }
 }
 

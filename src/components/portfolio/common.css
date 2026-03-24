@@ -1,9 +1,9 @@
 .common-section-header{
-    @apply text-center xl:mb-12 sm:mb-8 mb-6;
+  @apply text-center xl:mb-12 sm:mb-8 mb-6 flex flex-col items-center justify-center;
 }
 
 .section-title {
-  @apply md:text-3xl text-2xl font-bold font-heading;
+  @apply md:text-3xl text-2xl font-bold bg-primary-gradient bg-clip-text text-transparent;
 }
 
 .section-sub-title {

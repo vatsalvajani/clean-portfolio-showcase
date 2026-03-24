@@ -15,7 +15,7 @@
 }
 
 .hero-greeting {
-  @apply text-base text-body-light;
+  @apply text-base text-foreground;
 }
 
 .hero-heading {
