@@ -2,6 +2,10 @@
   @apply xl:pt-32 xl:pb-28 md:pt-28 lg:pb-24 pb-16 pt-24 flex items-center overflow-hidden bg-hero-pattern bg-no-repeat bg-center bg-cover;
 }
 
+.dark .hero-section {
+  @apply bg-dark-hero-pattern
+}
+
 .hero-container {
   @apply container;
 }
@@ -11,7 +15,7 @@
 }
 
 .hero-content {
-  @apply sm:max-w-[720px] sm:w-auto w-full text-center md:text-left lg:space-y-6;
+  @apply sm:max-w-[720px] sm:w-auto w-full text-center md:text-left;
 }
 
 .hero-greeting {
@@ -19,7 +23,7 @@
 }
 
 .hero-heading {
-  @apply font-bold xl:text-6xl xl:leading-tight md:text-5xl md:leading-tight sm:text-4xl sm:leading-tight text-3xl leading-tight lg:mb-0 mb-4 md:text-left text-center;
+  @apply font-bold xl:text-6xl xl:leading-tight md:text-5xl md:leading-tight sm:text-4xl sm:leading-tight text-3xl leading-tight mb-4 md:text-left text-center;
 }
 
 .hero-heading-line {
@@ -35,7 +39,7 @@
 }
 
 .hero-description {
-  @apply text-body-light max-w-lg mx-auto md:mx-0 leading-relaxed text-base lg:mb-0 mb-6;
+  @apply text-body-light max-w-lg mx-auto md:mx-0 leading-relaxed text-base mb-6;
 }
 
 .hero-actions {

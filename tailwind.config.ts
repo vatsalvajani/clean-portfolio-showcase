@@ -34,6 +34,7 @@ export default {
         "section-alt": "hsl(var(--section-alt))",
         "profile-img": "hsl(var(--profile-bg))",
         "subtext": "hsl(var(--sub-text))",
+        "menu": "hsl(var(--menu))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -77,6 +78,7 @@ export default {
         'primary-gradient': 'linear-gradient(to right, #6D4DF2, #8C71FF)',
         'primary-gradient-reverse': 'linear-gradient(to right, #8C71FF, #6D4DF2)',
         "hero-pattern": "url('/src/assets/bg-pattern.svg')",
+        "dark-hero-pattern": "url('/src/assets/dark-bg-pattern.svg')",
       },
       dropShadow: {
         'custom': '0 0 2rem rgba(0, 0, 0, 0.4)',

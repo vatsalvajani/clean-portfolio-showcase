@@ -9,6 +9,8 @@
     --background: 0 0% 100%;
     --foreground: 240 7.46% 13.14%;
 
+    --menu: 0 0% 100%;
+
     --profile-bg: 270 10% 39%;
 
     --card: 0 0% 100%;
@@ -51,6 +53,8 @@
     --background: 240 7.46% 13.14%;
     --foreground: 0 0% 100%;
 
+    --menu: 0 0% 100%;
+
     --card: 240 10.34% 17.06%;
     --card-foreground: 240 5% 80%;
 
@@ -72,13 +76,13 @@
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 10% 20%;
+    --border: 240 4.84% 24.31%;
     --input: 240 10% 20%;
     --ring: 252 86% 62%;
 
     --heading: 252 85% 75%;
     --body: 240 5% 75%;
-    --body-light: 240 1.36% 56.67%;
+    --body-light: 240 1.52% 74.12%;
     --section-alt: 240 10.34% 17.06%;
 
     --sub-text: 240 1.22% 48.04%;
@@ -88,6 +92,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Fix anchor scrolling under the fixed header */
+  section[id] {
+    scroll-margin-top: 96px;
   }
 
   * {

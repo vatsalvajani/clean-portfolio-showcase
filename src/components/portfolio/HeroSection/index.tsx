@@ -29,7 +29,7 @@ const HeroSection = () => (
             <span className="hero-heading-line hero-heading-line-gradient">Web Designer</span>
           </h1>
           <p className="hero-description">
-            I assist individuals and brands in achieving their objectives by creating and developing user-focused digital products and interactive experiences.
+            I design and develop high-performance, responsive websites using modern frontend technologies, focusing on usability, scalability, and seamless user experiences.
           </p>
           <div className="hero-actions">
             <Button className="hero-primary-button" asChild>

@@ -104,7 +104,7 @@ const WorkSection = () => {
 
         <div className="work-inner">
           <div className="work-card">
-            <div className="work-grid" key={current}>
+            <div className="work-grid work-slide-transition" key={current}>
               <div className="work-preview">
                 <img src={project.image} alt={project.title} className="work-category-image" />
               </div>

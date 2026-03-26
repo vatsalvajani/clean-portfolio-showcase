@@ -5,20 +5,56 @@ import "./Header.css";
 
 const navLinks = [
   { label: "About me", href: "#home" },
-  { label: "Services", href: "#services" },
-  { label: "Experience", href: "#experience" },
   { label: "Portfolio", href: "#work" },
   { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Header = () => {
   const [dark, setDark] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState(() => {
+    if (typeof window === "undefined") return "#home";
+    return window.location.hash || "#home";
+  });
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
+
+  useEffect(() => {
+    const updateFromHash = () => setActiveHref(window.location.hash || "#home");
+    updateFromHash();
+    window.addEventListener("hashchange", updateFromHash);
+    return () => window.removeEventListener("hashchange", updateFromHash);
+  }, []);
+
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+
+    setActiveHref(href);
+    setMobileOpen(false);
+
+    const element = document.querySelector(href);
+    const header = document.querySelector(".header");
+
+    if (element && header instanceof HTMLElement) {
+      const headerHeight = header.offsetHeight;
+
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: elementPosition - headerHeight,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <header className="header">
@@ -34,12 +70,15 @@ const Header = () => {
         </a>
 
         {/* Desktop nav */}
-        <nav className="header-nav">
+        <nav className={`header-nav ${mobileOpen ? "open" : ""}`}>
           {navLinks.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="header-nav-link"
+              className={`header-nav-link ${
+                activeHref === l.href ? "active" : ""
+              }`}
+              onClick={(e) => handleNavClick(e, l.href)}
             >
               {l.label}
             </a>

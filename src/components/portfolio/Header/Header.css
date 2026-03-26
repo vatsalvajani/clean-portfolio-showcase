@@ -15,7 +15,11 @@
 }
 
 .header-nav-link {
-  @apply lg:text-base sm:text-sm font-medium text-primary-foreground/70 active:text-primary-foreground transition-colors p-1;
+  @apply lg:text-base sm:text-sm font-medium text-menu/70 hover:text-menu active:text-menu transition-colors p-1;
+}
+
+.header-nav-link.active {
+  @apply text-menu;
 }
 
 .header-right {
@@ -23,7 +27,7 @@
 }
 
 .header-social-link {
-  @apply text-primary-foreground hover:text-primary-foreground transition-colors sm:w-5 sm:h-5 w-4 h-4;
+  @apply text-menu/80 hover:text-menu transition-colors sm:w-5 sm:h-5 w-4 h-4;
 }
 
 .header-social-link svg{
@@ -59,6 +63,6 @@
 }
 
 .header-mobile-link {
-  @apply text-sm font-medium text-primary-foreground hover:text-primary-foreground hover:translate-x-2 transition-all duration-300 py-2 px-2 rounded-md hover:bg-primary-foreground/10;
+  @apply text-sm font-medium text-primary-foreground hover:text-primary-foreground hover:translate-x-2 transition-all duration-300 py-2 px-2 rounded-md;
 }
 

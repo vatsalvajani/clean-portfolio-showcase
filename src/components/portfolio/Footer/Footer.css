@@ -2,6 +2,10 @@
   @apply bg-[hsl(230,25%,12%)] lg:py-10 md:py-8 py-6 relative before:content-[''] before:top-0 before:left-0 before:absolute before:w-full before:h-full before:bg-hero-pattern before:bg-no-repeat before:bg-center before:bg-cover;
 }
 
+.dark .footer {
+  @apply before:bg-dark-hero-pattern
+}
+
 .footer .container {
   @apply flex flex-col items-center md:gap-6 gap-4 relative;
 }
