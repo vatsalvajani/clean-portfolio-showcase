@@ -6,7 +6,7 @@ import jsLogo from "../../../assets/javascript-logo.svg";
 import bootstrapLogo from "../../../assets/bootstrap-logo.svg";
 import wordpressLogo from "../../../assets/wordpress-logo.svg";
 import reactLogo from "../../../assets/react-js-logo.svg";
-import profileImage from "../../../assets/profile-img.png";
+import profileImage from "../../../assets/new-profile-image-1.png";
 import "./HeroSection.css";
 
 const tools = [
@@ -33,7 +33,10 @@ const HeroSection = () => (
           </p>
           <div className="hero-actions">
             <Button className="hero-primary-button" asChild>
-              <a href="#contact">
+              <a
+                href="/Vatsal-Vajani-Senior-Web-Designer-Resume.pdf"
+                download="Vatsal-Vajani-Senior-Web-Designer-Resume.pdf"
+              >
                 Download CV <Download size={24} />
               </a>
             </Button>
@@ -62,6 +65,7 @@ const HeroSection = () => (
                   />
                 </div>
               ))}
+              <span className="tools-more-text">...and more</span>
             </div>
           </div>
         </div>

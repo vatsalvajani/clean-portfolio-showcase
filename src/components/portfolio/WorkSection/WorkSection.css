@@ -11,7 +11,7 @@
 }
 
 .work-grid {
-  @apply flex lg:items-stretch lg:flex-row flex-col transition-opacity lg:gap-x-10 lg:gap-y-0 sm:gap-y-6 gap-y-4 duration-500 ease-in-out;
+  @apply flex lg:items-stretch lg:flex-row flex-col lg:gap-x-10 lg:gap-y-0 sm:gap-y-6 gap-y-4;
 }
 
 .work-preview {
@@ -90,6 +90,10 @@
   @apply w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground bg-background hover:bg-primary hover:text-primary-foreground hover:border-primary transition-colors;
 }
 
+.work-arrow-button:disabled {
+  @apply opacity-40 cursor-not-allowed hover:bg-background hover:text-muted-foreground hover:border-border;
+}
+
 .work-dots {
   @apply flex gap-2;
 }
@@ -102,17 +106,28 @@
   @apply bg-primary;
 }
 
-.work-slide-transition {
-  animation: work-slide-in 450ms ease-in-out both;
+.work-slide-in-right {
+  animation: work-slide-in-right 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@keyframes work-slide-in {
+.work-slide-in-left {
+  animation: work-slide-in-left 320ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes work-slide-in-right {
   from {
-    opacity: 0;
-    transform: translateX(18px);
+    transform: translateX(32px);
   }
   to {
-    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes work-slide-in-left {
+  from {
+    transform: translateX(-32px);
+  }
+  to {
     transform: translateX(0);
   }
 }

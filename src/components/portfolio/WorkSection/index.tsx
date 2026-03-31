@@ -88,9 +88,33 @@ const projects = [
 
 const WorkSection = () => {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState<"next" | "prev">("next");
+  const [phase, setPhase] = useState<"idle" | "enter">("idle");
 
-  const prev = () => setCurrent((c) => (c === 0 ? projects.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === projects.length - 1 ? 0 : c + 1));
+  const isFirstProject = current === 0;
+  const isLastProject = current === projects.length - 1;
+
+  const animateTo = (targetIndex: number) => {
+    if (targetIndex === current || phase !== "idle") return;
+
+    setDirection(targetIndex > current ? "next" : "prev");
+    setCurrent(targetIndex);
+    setPhase("enter");
+
+    window.setTimeout(() => {
+      setPhase("idle");
+    }, 320);
+  };
+
+  const prev = () => {
+    if (isFirstProject) return;
+    animateTo(current - 1);
+  };
+
+  const next = () => {
+    if (isLastProject) return;
+    animateTo(current + 1);
+  };
 
   const project = projects[current];
 
@@ -104,7 +128,16 @@ const WorkSection = () => {
 
         <div className="work-inner">
           <div className="work-card">
-            <div className="work-grid work-slide-transition" key={current}>
+            <div
+              className={`work-grid ${
+                phase === "enter"
+                  ? direction === "next"
+                    ? "work-slide-in-right"
+                    : "work-slide-in-left"
+                  : ""
+              }`}
+              key={current}
+            >
               <div className="work-preview">
                 <img src={project.image} alt={project.title} className="work-category-image" />
               </div>
@@ -146,20 +179,31 @@ const WorkSection = () => {
           </div>
 
           <div className="work-controls">
-            <button onClick={prev} className="work-arrow-button" aria-label="Previous">
+            <button
+              onClick={prev}
+              className="work-arrow-button"
+              aria-label="Previous"
+              disabled={isFirstProject || phase !== "idle"}
+            >
               <ChevronLeft size={20} />
             </button>
-            {/* <div className="work-dots">
+            <div className="work-dots">
               {projects.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrent(i)}
+                  onClick={() => animateTo(i)}
                   className={`work-dot ${i === current ? "work-dot-active" : ""}`}
                   aria-label={`Go to project ${i + 1}`}
+                  disabled={phase !== "idle"}
                 />
               ))}
-            </div> */}
-            <button onClick={next} className="work-arrow-button" aria-label="Next">
+            </div>
+            <button
+              onClick={next}
+              className="work-arrow-button"
+              aria-label="Next"
+              disabled={isLastProject || phase !== "idle"}
+            >
               <ChevronRight size={20} />
             </button>
           </div>

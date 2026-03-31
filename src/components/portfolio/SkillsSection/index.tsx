@@ -37,14 +37,23 @@ const techIcons = [
   { image: bitbucketImg, label: "Bitbucket" },
 ];
 
-const skillCategories = [
+const technicalSkills = [
   { label: "Front-End", skills: "HTML5, CSS3, JavaScript, jQuery, Bootstrap, Tailwind CSS, Sass/SCSS" },
   { label: "Frameworks & Libraries", skills: "ReactJS, VueJS, NextJS" },
   { label: "CMS & Page Builders", skills: "WordPress, Elementor, WPBakery" },
-  { label: "SEO & Accessibility", skills: "Meta tags, Schema markup, SEO-friendly design, WCAG Guidelines, Screen Reader Compatibility" },
   { label: "Design Tools", skills: "Figma, Photoshop" },
-  { label: "Animation", skills: "CSS Animation, GSAP (GreenSock), Animate On Scroll (AOS), Lottie (JSON-based animations)" },
   { label: "Dev Tools & Workflow", skills: "Git, GitHub, Bitbucket, VS Code" },
+];
+
+const nonTechnicalSkills = [
+  {
+    label: "Soft Skills",
+    skills: "Client Communication, Team Collaboration, Leadership, Requirement Analysis, Rational Thinking, Problem Solving",
+  },
+  {
+    label: "Languages",
+    skills: "English, Hindi, Gujarati (Full Professional Proficiency)",
+  },
 ];
 
 const SkillsSection = () => (
@@ -56,25 +65,41 @@ const SkillsSection = () => (
       </div>
 
       <div className="skills-layout">
+        <div className="skills-column">
+          <h3 className="skills-column-title">Technical Skills</h3>
+          <div className="skills-list">
+            {technicalSkills.map(({ label, skills }) => (
+              <div key={label} className="skills-list-item">
+                <span className="skills-list-label">{label}:</span>
+                <p className="skills-list-text">
+                  {skills}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="skills-column">
+          <h3 className="skills-column-title">Non-Technical Skills</h3>
+          <div className="skills-list">
+            {nonTechnicalSkills.map(({ label, skills }) => (
+              <div key={label} className="skills-list-item">
+                <span className="skills-list-label">{label}:</span>
+                <p className="skills-list-text">
+                  {skills}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="skills-icons-section">
+        <h3 className="skills-column-title">Tools & Technologies</h3>
         <div className="skills-icons-grid">
           {techIcons.map(({ image, label }) => (
             <div key={label} className="skills-icon-card" title={label}>
-              <img
-                src={image}
-                alt={label}
-                className="skills-icon-image"
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="skills-list">
-          {skillCategories.map(({ label, skills }) => (
-            <div key={label} className="skills-list-item">
-              <span className="skills-list-label">{label}:</span>
-              <p className="skills-list-text">
-                {skills}
-              </p>
+              <img src={image} alt={label} className="skills-icon-image" />
             </div>
           ))}
         </div>

@@ -47,7 +47,7 @@
 }
 
 .contact-form-wrapper {
-  @apply max-w-3xl w-full;
+  @apply max-w-6xl w-full;
 }
 
 .contact-form-title {

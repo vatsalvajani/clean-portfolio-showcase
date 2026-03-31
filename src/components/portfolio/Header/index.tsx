@@ -31,6 +31,41 @@ const Header = () => {
     return () => window.removeEventListener("hashchange", updateFromHash);
   }, []);
 
+  useEffect(() => {
+    const getHeaderOffset = () => {
+      const header = document.querySelector(".header");
+      return header instanceof HTMLElement ? header.offsetHeight + 16 : 96;
+    };
+
+    const updateActiveFromScroll = () => {
+      const offset = getHeaderOffset();
+      const scrollPosition = window.scrollY + offset;
+
+      let nextActive = navLinks[0].href;
+
+      for (const link of navLinks) {
+        const id = link.href.replace("#", "");
+        const section = document.getElementById(id);
+        if (!section) continue;
+
+        if (scrollPosition >= section.offsetTop) {
+          nextActive = link.href;
+        }
+      }
+
+      setActiveHref(nextActive);
+    };
+
+    updateActiveFromScroll();
+    window.addEventListener("scroll", updateActiveFromScroll, { passive: true });
+    window.addEventListener("resize", updateActiveFromScroll);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveFromScroll);
+      window.removeEventListener("resize", updateActiveFromScroll);
+    };
+  }, []);
+
   const handleNavClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
@@ -141,7 +176,7 @@ const Header = () => {
             <a
               key={l.href}
               href={l.href}
-              onClick={() => setMobileOpen(false)}
+              onClick={(e) => handleNavClick(e, l.href)}
               className="header-mobile-link"
               style={{
                 transitionDelay: mobileOpen ? `${i * 60}ms` : '0ms',

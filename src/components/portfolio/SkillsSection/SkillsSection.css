@@ -1,13 +1,25 @@
-.skills-container {
-  @apply container max-w-5xl;
+.skills-layout {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start relative before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:h-full before:border-r before:border-border before:-z-10 2xl:max-w-7xl mx-auto;
 }
 
-.skills-layout {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-12 items-start relative before:hidden md:before:flex md:before:content-[''] md:before:absolute before:left-1/2 before:-translate-x-1/2 before:w-px before:h-full before:border before:border-border;
+.skills-column {
+  @apply flex flex-col px-5;
+}
+
+.skills-column-title {
+  @apply text-lg md:text-xl font-semibold font-heading text-foreground mb-4;
 }
 
 .skills-icons-grid {
-  @apply flex flex-wrap justify-center gap-4 justify-items-center md:max-w-xl;
+  @apply flex flex-wrap justify-center gap-4 max-w-3xl mx-auto;
+}
+
+.skills-icons-section {
+  @apply mt-10;
+}
+
+.skills-icons-section .skills-column-title{
+  @apply text-center
 }
 
 .skills-icon-card {
@@ -19,7 +31,7 @@
 }
 
 .skills-list {
-  @apply flex flex-col gap-y-4 max-w-xl xl:px-6 px-0;
+  @apply flex flex-col gap-y-4;
 }
 
 .skills-list-item {

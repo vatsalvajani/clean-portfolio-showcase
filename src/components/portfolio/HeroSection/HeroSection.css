@@ -15,11 +15,11 @@
 }
 
 .hero-content {
-  @apply sm:max-w-[720px] sm:w-auto w-full text-center md:text-left;
+  @apply 2xl:max-w-2xl xl:max-w-xl sm:max-w-[720px] sm:w-auto w-full text-center md:text-left;
 }
 
 .hero-greeting {
-  @apply text-base text-foreground;
+  @apply xl:text-xl text-foreground;
 }
 
 .hero-heading {
@@ -39,7 +39,7 @@
 }
 
 .hero-description {
-  @apply text-body-light max-w-lg mx-auto md:mx-0 leading-relaxed text-base mb-6;
+  @apply text-body-light leading-relaxed text-base mb-6;
 }
 
 .hero-actions {
@@ -74,19 +74,26 @@
   @apply sm:w-14 sm:h-14 w-12 h-12 rounded-lg bg-section-alt border border-border flex items-center justify-center;
 }
 
+.tools-more-text{
+  @apply flex items-end text-sm text-subtext;
+}
+
 .hero-tool-icon {
   @apply w-7 h-7 object-contain;
 }
 
 .hero-image-wrapper{
-  @apply w-full xl:max-w-md lg:max-w-sm md:max-w-72 sm:max-w-80 max-w-72 flex items-center justify-center
+  @apply w-full flex items-center justify-end
 }
 
 .profile-img-wrap{
-  @apply rounded-full overflow-hidden border border-border bg-section-alt flex justify-center items-end max-w-full w-full xl:min-h-[448px] lg:min-h-96 md:min-h-72 sm:min-h-80 sm:w-full sm:h-full min-h-72
+  @apply rounded-full overflow-hidden border border-border bg-section-alt flex justify-center items-end  w-full 2xl:max-w-lg xl:max-w-md lg:max-w-sm md:max-w-72 sm:max-w-80 max-w-72 2xl:min-h-[512px] xl:min-h-[448px] lg:min-h-96 md:min-h-72 sm:min-h-80 sm:w-full sm:h-full min-h-72
 }
 
-.hero-image {
+/* .hero-image {
   @apply lg:w-5/6 md:w-11/12 relative z-20 drop-shadow-custom object-contain;
-}
+} */
 
+.hero-image{
+  @apply w-11/12 object-contain object-top
+}

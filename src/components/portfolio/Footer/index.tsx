@@ -1,6 +1,35 @@
+import type { MouseEvent } from "react";
 import "./Footer.css";
 
-const navLinks = ["About", "Resume", "Services", "Portfolio", "Contact"];
+const navLinks = [
+  { label: "About me", href: "#home" },
+  { label: "Portfolio", href: "#work" },
+  { label: "Skills", href: "#skills" },
+  { label: "Experience", href: "#experience" },
+  { label: "Services", href: "#services" },
+  { label: "Contact", href: "#contact" },
+];
+
+const handleNavClick = (
+  e: MouseEvent<HTMLAnchorElement>,
+  href: string
+) => {
+  e.preventDefault();
+
+  const element = document.querySelector(href);
+  const header = document.querySelector(".header");
+
+  if (element && header instanceof HTMLElement) {
+    const headerHeight = header.offsetHeight;
+    const elementPosition =
+      element.getBoundingClientRect().top + window.pageYOffset;
+
+    window.scrollTo({
+      top: elementPosition - headerHeight,
+      behavior: "smooth",
+    });
+  }
+};
 
 const Footer = () => (
   <footer className="footer">
@@ -17,11 +46,12 @@ const Footer = () => (
       <nav className="footer-nav">
         {navLinks.map((link) => (
           <a
-            key={link}
-            href={`#${link.toLowerCase()}`}
+            key={link.href}
+            href={link.href}
             className="footer-nav-link"
+            onClick={(e) => handleNavClick(e, link.href)}
           >
-            {link}
+            {link.label}
           </a>
         ))}
       </nav>
