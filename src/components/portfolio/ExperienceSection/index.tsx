@@ -5,7 +5,7 @@ import "./ExperienceSection.css";
 const experiences = [
   {
     company: "Rlogical Techsoft Pvt. Ltd.",
-    role: "Senior Web Designer",
+    role: "Senior Frontend Developer",
     period: "Mar 2021 - Present (5 yrs 1 mos)",
     points: [
       "Developed high-performance frontend solutions using Vue.js, React.js, and WordPress.",

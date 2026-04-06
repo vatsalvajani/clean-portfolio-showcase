@@ -23,10 +23,10 @@ const HeroSection = () => (
     <div className="container">
       <div className="hero-layout">
         <div className="hero-content">
-          <p className="hero-greeting">Hi, I'm Vatsal</p>
+          <p className="hero-greeting">Hi, I'm Vatsal Vajani</p>
           <h1 className="hero-heading">
             <span className="hero-heading-line hero-heading-line-main">Senior</span>
-            <span className="hero-heading-line hero-heading-line-gradient">Web Designer</span>
+            <span className="hero-heading-line hero-heading-line-gradient">Frontend Developer</span>
           </h1>
           <p className="hero-description">
             I design and develop high-performance, responsive websites using modern frontend technologies, focusing on usability, scalability, and seamless user experiences.

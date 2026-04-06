@@ -1,9 +1,9 @@
 .skills-layout {
-  @apply grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start relative before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:h-full before:border-r before:border-border before:-z-10 2xl:max-w-7xl mx-auto;
+  @apply grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start relative md:before:inline-flex before:hidden before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:h-full before:border-r before:border-border before:-z-10 2xl:max-w-7xl mx-auto;
 }
 
 .skills-column {
-  @apply flex flex-col px-5;
+  @apply flex flex-col sm:px-5;
 }
 
 .skills-column-title {

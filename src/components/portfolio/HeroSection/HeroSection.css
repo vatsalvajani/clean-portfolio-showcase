@@ -11,7 +11,7 @@
 }
 
 .hero-layout {
-  @apply flex flex-col-reverse md:flex-row items-center md:justify-between justify-center sm:gap-10 gap-8;
+  @apply flex flex-col-reverse md:flex-row items-center md:justify-between justify-center xl:gap-10 md:gap-4 gap-6;
 }
 
 .hero-content {
@@ -19,15 +19,11 @@
 }
 
 .hero-greeting {
-  @apply xl:text-xl text-foreground;
+  @apply xl:text-3xl lg:text-2xl font-semibold text-foreground;
 }
 
 .hero-heading {
-  @apply font-bold xl:text-6xl xl:leading-tight md:text-5xl md:leading-tight sm:text-4xl sm:leading-tight text-3xl leading-tight mb-4 md:text-left text-center;
-}
-
-.hero-heading-line {
-  @apply inline-flex md:w-full;
+  @apply font-bold xl:text-5xl xl:leading-tight md:text-4xl md:leading-tight sm:text-4xl sm:leading-tight text-3xl leading-tight mb-4 md:text-left text-center flex items-center md:justify-start justify-center flex-wrap gap-x-2;
 }
 
 .hero-heading-line-main {
@@ -35,7 +31,7 @@
 }
 
 .hero-heading-line-gradient {
-  @apply bg-primary-gradient bg-clip-text text-transparent md:ml-0 ml-2;
+  @apply bg-primary-gradient bg-clip-text text-transparent;
 }
 
 .hero-description {
@@ -67,11 +63,11 @@
 }
 
 .hero-tools {
-  @apply flex sm:flex-nowrap flex-wrap gap-3 justify-center md:justify-start;
+  @apply flex sm:flex-nowrap flex-wrap lg:gap-3 gap-2 justify-center md:justify-start;
 }
 
 .hero-tool-card {
-  @apply sm:w-14 sm:h-14 w-12 h-12 rounded-lg bg-section-alt border border-border flex items-center justify-center;
+  @apply lg:w-14 lg:h-14 w-12 h-12 rounded-lg bg-section-alt border border-border flex items-center justify-center;
 }
 
 .tools-more-text{
@@ -83,11 +79,11 @@
 }
 
 .hero-image-wrapper{
-  @apply w-full flex items-center justify-end
+  @apply w-full flex items-center md:justify-end justify-center
 }
 
 .profile-img-wrap{
-  @apply rounded-full overflow-hidden border border-border bg-section-alt flex justify-center items-end  w-full 2xl:max-w-lg xl:max-w-md lg:max-w-sm md:max-w-72 sm:max-w-80 max-w-72 2xl:min-h-[512px] xl:min-h-[448px] lg:min-h-96 md:min-h-72 sm:min-h-80 sm:w-full sm:h-full min-h-72
+  @apply rounded-full overflow-hidden border border-border bg-section-alt flex justify-center items-end  w-full 2xl:max-w-lg xl:max-w-md lg:max-w-sm md:max-w-72 sm:max-w-80 max-w-48 2xl:min-h-[512px] xl:min-h-[448px] lg:min-h-96 md:min-h-72 sm:min-h-80 sm:w-full sm:h-full min-h-48
 }
 
 /* .hero-image {
