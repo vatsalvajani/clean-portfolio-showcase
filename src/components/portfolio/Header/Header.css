@@ -7,7 +7,7 @@
 }
 
 .header-logo {
-  @apply flex items-center gap-2 text-primary-foreground font-heading font-medium xl:text-2xl tracking-[0.48px];
+  @apply flex items-center gap-2 text-primary-foreground font-heading font-medium xl:text-2xl tracking-[0.48px] focus-visible:outline-none;
 }
 
 .header-nav {
