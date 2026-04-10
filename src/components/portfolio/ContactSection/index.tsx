@@ -1,14 +1,61 @@
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { toast } from "@/components/ui/sonner";
 import "./ContactSection.css";
+
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", subject: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:vatsal.vajani2911@gmail.com?subject=${encodeURIComponent(form.subject || `Portfolio Contact from ${form.name}`)}&body=${encodeURIComponent(form.message)}`;
+
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY as string | undefined;
+    if (!accessKey?.trim()) {
+      toast.error("Contact form is not configured", {
+        description: "Add VITE_WEB3FORMS_ACCESS_KEY in Vercel (and .env locally). Get a free key at web3forms.com.",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey.trim(),
+          subject: form.subject || `Portfolio contact from ${form.name}`,
+          name: form.name,
+          email: form.email,
+          replyto: form.email,
+          message: `Phone: ${form.phone}\n\n${form.message}`,
+        }),
+      });
+
+      const data = (await res.json()) as { success?: boolean; message?: string };
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Request failed");
+      }
+
+      toast.success("Thank you for contacting me!", {
+        description: "I've received your message and will get back to you soon.",
+      });
+      setForm({ name: "", email: "", phone: "", subject: "", message: "" });
+    } catch {
+      toast.error("Could not send your message", {
+        description: "Please try again in a moment or email vatsal.vajani2911@gmail.com directly.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -132,8 +179,12 @@ const ContactSection = () => {
                   className="contact-form-textarea"
                 />
               </div>
-              <Button type="submit" size="lg" className="rounded-lg gap-2">
-                Send Message <ArrowUpRight size={16} />
+              <Button type="submit" size="lg" className="rounded-lg gap-2" disabled={isSubmitting}>
+                {isSubmitting ? "Sending…" : (
+                  <>
+                    Send Message <ArrowUpRight size={16} />
+                  </>
+                )}
               </Button>
             </form>
           </div>
