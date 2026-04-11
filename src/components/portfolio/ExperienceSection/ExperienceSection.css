@@ -22,12 +22,12 @@
   @apply absolute left-0 md:left-1 top-1 sm:w-10 sm:h-10 w-8 h-8 rounded-full bg-primary-gradient p-0.5;
 }
 
-.experience-badge-wrap{
-  @apply flex items-center justify-center h-full w-full rounded-full bg-background
+.experience-badge-wrap {
+  @apply flex h-full w-full items-center justify-center rounded-full bg-background;
 }
 
-.experince-details-wrap{
-  @apply flex flex-col
+.experince-details-wrap {
+  @apply flex flex-col;
 }
 
 .experience-period {

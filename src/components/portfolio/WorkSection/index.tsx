@@ -120,13 +120,34 @@ const WorkSection = () => {
 
   return (
     <section id="work" className="work-section common-bg common-section-spacing">
-      <div className="container">
-        <div className="common-section-header">
+      <div className="container work-portfolio-layout">
+        <div className="common-section-header work-portfolio-head">
           <p className="section-sub-title">Portfolio</p>
           <h2 className="section-title">My Latest Works</h2>
         </div>
 
-        <div className="work-inner">
+        <div className="work-controls work-portfolio-nav" aria-label="Project navigation">
+          <button
+            type="button"
+            onClick={prev}
+            className="work-arrow-button"
+            aria-label="Previous project"
+            disabled={isFirstProject || phase !== "idle"}
+          >
+            <ChevronLeft size={22} />
+          </button>
+          <button
+            type="button"
+            onClick={next}
+            className="work-arrow-button"
+            aria-label="Next project"
+            disabled={isLastProject || phase !== "idle"}
+          >
+            <ChevronRight size={22} />
+          </button>
+        </div>
+
+        <div className="work-inner work-portfolio-body">
           <div className="work-card">
             <div
               className={`work-grid ${
@@ -139,7 +160,9 @@ const WorkSection = () => {
               key={current}
             >
               <div className="work-preview">
-                <img src={project.image} alt={project.title} className="work-category-image" />
+                <div className="work-preview-inner">
+                  <img src={project.image} alt={project.title} className="work-category-image" />
+                </div>
               </div>
 
               <div className="work-details">
@@ -155,7 +178,7 @@ const WorkSection = () => {
                     >
                       <ExternalLink size={16} />
                     </a>
-                  </div>                  
+                  </div>
                   <p className="work-description">{project.desc}</p>
                 </div>
 
@@ -176,36 +199,6 @@ const WorkSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="work-controls">
-            <button
-              onClick={prev}
-              className="work-arrow-button"
-              aria-label="Previous"
-              disabled={isFirstProject || phase !== "idle"}
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <div className="work-dots">
-              {projects.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => animateTo(i)}
-                  className={`work-dot ${i === current ? "work-dot-active" : ""}`}
-                  aria-label={`Go to project ${i + 1}`}
-                  disabled={phase !== "idle"}
-                />
-              ))}
-            </div>
-            <button
-              onClick={next}
-              className="work-arrow-button"
-              aria-label="Next"
-              disabled={isLastProject || phase !== "idle"}
-            >
-              <ChevronRight size={20} />
-            </button>
           </div>
         </div>
       </div>

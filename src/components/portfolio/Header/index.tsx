@@ -1,7 +1,18 @@
 import { useState, useEffect } from "react";
-import { Moon, Sun, Linkedin, Github, Menu, X } from "lucide-react";
+import { Linkedin, Github, Menu, X } from "lucide-react";
 import modeIcon from "../../../assets/mode-icon.svg";
 import "./Header.css";
+
+const THEME_STORAGE_KEY = "portfolio-theme";
+
+const readInitialDark = () => {
+  if (typeof window === "undefined") return false;
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY) === "dark";
+  } catch {
+    return false;
+  }
+};
 
 const navLinks = [
   { label: "About me", href: "#home" },
@@ -13,16 +24,12 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(readInitialDark);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeHref, setActiveHref] = useState(() => {
     if (typeof window === "undefined") return "#home";
     return window.location.hash || "#home";
   });
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-  }, [dark]);
 
   useEffect(() => {
     const updateFromHash = () => setActiveHref(window.location.hash || "#home");
@@ -91,6 +98,19 @@ const Header = () => {
     }
   };
 
+  const toggleTheme = () => {
+    setDark((prev) => {
+      const next = !prev;
+      document.documentElement.classList.toggle("dark", next);
+      try {
+        localStorage.setItem(THEME_STORAGE_KEY, next ? "dark" : "light");
+      } catch {
+        /* ignore */
+      }
+      return next;
+    });
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -151,7 +171,8 @@ const Header = () => {
           </button>
 
           <button
-            onClick={() => setDark(!dark)}
+            type="button"
+            onClick={toggleTheme}
             className="header-theme-toggle"
             aria-label="Toggle theme"
           >

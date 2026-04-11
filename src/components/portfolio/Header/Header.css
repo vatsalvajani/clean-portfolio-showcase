@@ -30,8 +30,8 @@
   @apply text-menu/80 hover:text-menu transition-colors sm:w-5 sm:h-5 w-4 h-4;
 }
 
-.header-social-link svg{
-  @apply w-full
+.header-social-link svg {
+  @apply h-full w-full;
 }
 
 .header-theme-toggle {

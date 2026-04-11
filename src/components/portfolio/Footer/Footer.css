@@ -1,9 +1,5 @@
 .footer {
-  @apply bg-[hsl(230,25%,12%)] lg:py-10 md:py-8 py-6 relative before:content-[''] before:top-0 before:left-0 before:absolute before:w-full before:h-full before:bg-hero-pattern before:bg-no-repeat before:bg-center before:bg-cover;
-}
-
-.dark .footer {
-  @apply before:bg-dark-hero-pattern
+  @apply relative bg-[hsl(230,25%,12%)] py-6 before:absolute before:inset-0 before:bg-hero-pattern before:bg-cover before:bg-center before:bg-no-repeat before:content-[''] md:py-8 lg:py-10 dark:before:bg-dark-hero-pattern;
 }
 
 .footer .container {

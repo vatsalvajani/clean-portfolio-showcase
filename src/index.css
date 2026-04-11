@@ -92,6 +92,11 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
   }
 
   /* Fix anchor scrolling under the fixed header */
@@ -99,13 +104,21 @@
     scroll-margin-top: 96px;
   }
 
-  * {
-    @apply border-border;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  /* Theme: apply class on <html> synchronously from JS — avoid transitioning every
+     descendant (was on *), which caused uneven, slow repaints. */
+  body {
+    @apply border-border bg-background text-body antialiased;
+    transition: background-color 0.18s ease-out, color 0.18s ease-out;
   }
 
-  body {
-    @apply bg-background text-body antialiased;
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      transition: none;
+    }
+  }
+
+  * {
+    @apply border-border;
   }
 
   h1, h2, h3, h4, h5, h6 {

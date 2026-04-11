@@ -2,8 +2,8 @@
   @apply container max-w-6xl;
 }
 
-.contact-header{
-  @apply flex
+.contact-header {
+  @apply flex w-full flex-col;
 }
 
 .contact-subtitle {
@@ -26,12 +26,12 @@
   @apply lg:w-14 lg:h-14 sm:w-12 sm:h-12 w-10 h-10 rounded-xl flex items-center justify-center shrink-0 bg-primary-gradient p-0.5;
 }
 
-.contact-icon-span{
-  @apply flex items-center justify-center h-full w-full rounded-[10px] bg-background
+.contact-icon-span {
+  @apply flex h-full w-full items-center justify-center rounded-[10px] bg-background;
 }
 
-.contact-info{
-  @apply flex flex-col gap-y-0.5
+.contact-info {
+  @apply flex flex-col gap-y-0.5;
 }
 
 .contact-label {

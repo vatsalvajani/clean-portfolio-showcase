@@ -18,16 +18,16 @@
   @apply mt-10;
 }
 
-.skills-icons-section .skills-column-title{
-  @apply text-center
+.skills-icons-section .skills-column-title {
+  @apply text-center;
 }
 
 .skills-icon-card {
-  @apply md:w-16 md:h-16 w-14 h-14 rounded-xl bg-section-alt border border-border flex items-center justify-center shadow-sm;
+  @apply flex h-14 w-14 items-center justify-center rounded-xl border border-border bg-section-alt shadow-sm md:h-16 md:w-16;
 }
 
-.skills-icon-card img{
-  @apply md:w-9 md:h-9 w-8 h-8
+.skills-icon-card img {
+  @apply h-8 w-8 md:h-9 md:w-9;
 }
 
 .skills-list {
