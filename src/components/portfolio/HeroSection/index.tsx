@@ -34,8 +34,8 @@ const HeroSection = () => (
           <div className="hero-actions">
             <Button className="hero-primary-button" asChild>
               <a
-                href="/Vatsal-Vajani-Senior-Frontend-Developer-Resume.pdf"
-                download="Vatsal-Vajani-Senior-Frontend-Developer-Resume.pdf"
+                href="/Vatsal_Vajani_Senior_Frontend_Developer_Resume.pdf"
+                download="Vatsal_Vajani_Senior_Frontend_Developer_Resume.pdf"
               >
                 Download CV <Download size={24} />
               </a>
