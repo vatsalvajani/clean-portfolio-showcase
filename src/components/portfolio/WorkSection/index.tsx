@@ -64,7 +64,7 @@ const projects = [
     type: "Creative Architecture Site",
     features: "Bilingual support, smooth animations, responsive layout, WordPress integration",
     tools: "WordPress, CSS, JavaScript",
-    link: "https://demo.viktorvrecko.com/",
+    link: "https://viktorvrecko.com/",
   },
   {
     title: "Israel Weapon Industry",
